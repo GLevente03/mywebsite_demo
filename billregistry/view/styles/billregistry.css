@@ -1,0 +1,47 @@
+section{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin-top: 70px;
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+    font-family: Arial, Helvetica, sans-serif;
+    width: 250px;
+    color: white;
+}
+
+input{
+    border-bottom: solid 3px white;
+}
+
+input::placeholder{
+    color: #330867;
+}
+
+button{
+    background-color:#330867;
+    color: white;
+    padding: 10px;
+    cursor: pointer;
+    width: max-content;
+    align-self: center;
+    border-radius: 5px;
+}
+
+.emptyfocusout{
+    border: solid 3px red;
+    border-radius: 5px;
+    background-color: rgba(255,0,0,0.2);
+    transition: border 0.15s;
+    transition: background-color 0.15s;
+}
+
+.bill-grid{
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    grid-column-gap: 10px;
+    grid-row-gap: 10px;
+}
