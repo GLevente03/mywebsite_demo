@@ -1,0 +1,82 @@
+.grand-canyon-profile{
+    position: relative;
+    display: inline-block;
+    margin-top: 55px;
+}
+
+.grand-canyon-profile img{
+    display: block;
+    width: 100%;
+    height: auto;
+
+    /* Maszk alkalmazása */
+    mask-image: linear-gradient(to bottom, black 60%, transparent 100%);
+    -webkit-mask-image: linear-gradient(to bottom, black 60%, transparent 100%);
+}
+
+@keyframes welcome-text-fade-in {
+    0%{
+        opacity: 0;
+    }
+    10%{
+        opacity: 0.1;
+    }
+    20%{
+        opacity: 0.2;
+    }
+    30%{
+        opacity: 0.3;
+    }
+    40%{
+        opacity: 0.4;
+    }
+    50%{
+        opacity: 0.5;
+    }
+    60%{
+        opacity: 0.6;
+    }
+    70%{
+        opacity: 0.7;
+    }
+    80%{
+        opacity: 0.8;
+    }
+    90%{
+        opacity: 0.9;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+
+.welcome-text{
+    display: flex;
+    width: 100%;
+    height: auto;
+    align-content: center;
+    justify-content: center;
+}
+
+.welcome-text p{
+    color: white;
+    font-size: clamp(16px, 6vw, 90px);;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    z-index: 10;
+
+    animation-name: welcome-text-fade-in;
+    animation-duration: 3s;
+}
+
+@media(min-width: 801px){
+    .welcome-text{
+        margin-top: -100px;
+    }
+}
+
+@media(max-width: 800px){
+    .welcome-text{
+        margin-top: -50px;
+    }
+}

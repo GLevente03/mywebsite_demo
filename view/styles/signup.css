@@ -1,0 +1,32 @@
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+p{
+    margin: 0;
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+}
+
+input{
+    border-bottom: solid 2px #330867;
+}
+
+input::placeholder{
+    font-family: Arial, Helvetica, sans-serif;
+    color: #330867;
+}
+
+.success{
+    color: green;
+}
+
+.error{
+    color: red;
+}

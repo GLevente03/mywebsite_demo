@@ -1,0 +1,254 @@
+.visible{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 999;
+    transition: background-color 1s;
+}
+
+.invisible{
+    display: none !important;
+}
+
+header{
+    height: 70px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: white;
+    border-bottom-right-radius: 20px;
+    border-bottom-left-radius: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    z-index: 1000;
+}
+
+li{
+   list-style: none; 
+}
+
+.material-symbols-outlined {
+  font-variation-settings:
+  'FILL' 0,
+  'wght' 400,
+  'GRAD' 0,
+  'opsz' 24
+}
+
+/*LEFT SECTION OF HEADER*/
+.left-section{
+    display: flex;
+    align-items: center;
+    margin-right: 30px;
+}
+
+.logo{
+    width: clamp(200px, 25vw, 300px);
+    cursor: pointer;
+}
+
+/*MIDDLE SECTION OF HEADER*/
+.middle-section{
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+}
+
+.about-me-button,
+.my-trips-button,
+.portfolio-button,
+.contact-button{
+    margin-right: 20px;
+    color: #330867;
+    font-family: Arial, Helvetica, sans-serif;
+    position: relative;
+    border: 12px solid transparent;
+    border-radius: 30px;
+    background: white;
+    background-clip: padding-box;
+    padding: 10px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-image 0.15s, color 0.15s;
+    font-size: 1vw;
+    width: max-content;
+}
+
+.about-me-button:hover,
+.my-trips-button:hover,
+.portfolio-button:hover,
+.contact-button:hover{
+    background-image: linear-gradient(to top, #30cfd0 0%, #330867 100%);
+    color: white;
+}
+
+.about-me-button::after,
+.my-trips-button::after,
+.portfolio-button::after,
+.contact-button::after{
+    position: absolute;
+    top: -4px; bottom: -4px;
+    left: -4px; right: -4px;
+    background: linear-gradient(to top, #30cfd0 0%, #330867 100%);
+    content: '';
+    z-index: -1;
+    border-radius: 24px;
+}
+
+/*RIGHT SECTION OF HEADER*/
+.right-section{
+    display: flex;
+    align-items: center;
+    flex: 1;
+    justify-content: end;
+    column-gap: 17px;
+    margin-right: 17px;
+}
+
+.profile-btn, .logout-btn, .login-btn{
+    width: max-content;
+    background: linear-gradient(to top, #30cfd0 0%, #330867 100%);
+    border-radius: 30px;
+    color: white;
+    padding: 10px;
+    cursor: pointer;
+    font-size: 1.3vw;
+}
+
+.profile-flex, .logout-flex, .login-flex{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    column-gap: 5px;
+}
+
+.language-change-button{
+    background-size: cover;
+    border: none;
+    height: 20px;
+    width: 30px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+.en{
+    background-image: url(../images/hun-flag.png);
+}
+.hu{
+    background-image: url(../images/gb-flag.webp);
+    background-size: contain;
+    background-repeat: no-repeat;
+
+}
+
+@media (min-width: 901px) {
+    .hamburger,
+    .menu,
+    .bar {
+      display: none !important;
+    }
+  }
+
+@media(max-width: 900px){
+    .menu {
+        display: flex;
+        flex-direction: column;
+        row-gap: 10px;
+        margin-top: 90px;
+        height: 100%;
+        width: 0;
+        position: fixed;
+        z-index: 10000;
+        top: 0;
+        right: 0;
+        background-color: white;
+        overflow-x: hidden;
+        transition: 0.5s;
+        padding-top: 40px;
+        border-top-left-radius: 20px;
+        border-bottom-left-radius: 20px;
+    }
+
+    .language-change-button{
+        margin-right: 60px;
+    }
+
+    .profile-btn-hamburger, .logout-btn-hamburger, .login-btn-hamburger{
+        width: max-content;
+        background: linear-gradient(to top, #30cfd0 0%, #330867 100%);
+        border-radius: 30px;
+        color: white;
+        padding: 10px;
+        cursor: pointer;
+        margin-left: 20px;
+    }
+
+    .logout-btn-hamburger, .login-btn-hamburger{
+        margin-bottom: 10px;
+    }
+    
+    .profile-flex-hamburger, .logout-flex-hamburger, .login-flex-hamburger{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        column-gap: 5px;
+    }
+
+    .menu-item{
+        color: #330867;
+        font-size: clamp(20px, 3vw, 40px);
+        margin-left: 20px;
+        cursor: pointer;
+        transition: color 0.15s;
+    }
+
+    .menu-item:hover{
+        color: #30cfd0;
+    }
+
+    .menu .closebtn {
+        position: absolute;
+        top: 0;
+        right: 25px;
+        font-size: 36px;
+    }
+    .hamburger {
+        display: block;
+        position: absolute;
+        top: 15px;
+        right: 20px;
+        cursor: pointer;
+        z-index: 2;
+    }
+    .bar {
+        width: 35px;
+        height: 5px;
+        background-color: #330867;
+        margin: 6px 0;
+        border-radius: 3px;
+        transition: 0.4s;
+    }
+    .change .bar1 {
+        -webkit-transform: rotate(-45deg) translate(-9px, 7px);
+        transform: rotate(-45deg) translate(-9px, 7px);
+    }
+    .change .bar2 {
+        opacity: 0;
+    }
+    .change .bar3 {
+        -webkit-transform: rotate(45deg) translate(-8px, -8px);
+        transform: rotate(45deg) translate(-8px, -8px);
+    }
+
+    /* Making the buttons disappear on the default header bar when width <= 400px */
+    .middle-section,
+    .right-section > *:not(.hamburger):not(.language-change-button):not(.en):not(.hu) {
+        display: none !important;
+    }
+}
