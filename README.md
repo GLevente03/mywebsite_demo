@@ -47,7 +47,7 @@ This project serves as both a learning platform and a foundation for future exte
 ### 1. Clone the repository
 
 ```
-git clone https://github.com/yourusername/your-repo.git
+git clone https://github.com/GLevente03/mywebsite_demo.git
 cd your-repo
 ```
 
